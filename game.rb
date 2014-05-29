@@ -30,3 +30,17 @@ class Snake
         end
     
 end
+
+class Board
+    @board = []
+    def init_board
+        100.times do |i|
+        row = [] 
+        100.times do |j|
+            row<<'0'
+        end
+        @board<<row 
+        end
+        
+    end
+end
