@@ -30,29 +30,29 @@ class Board
      
      
     def update(snake)
-        if board[@head_x][@head_y]==1
+        if board[snake.head_x][snake.head_y]==1
             puts "Don't be a cannibal, bro." 
             return 
         end
          
-        if board[@head_x][@head_y] == 2
+        if board[snake.head_x][snake.head_y] == 2
             length += 1
         end
          
         if dir=='l'
-            board[@head_x][@head_y - 1] = 3
+            board[snake.head_x][snake.head_y - 1] = 3
            
         elsif dir == 'r'
-            board[@head_x][@head_y + 1] = 3
+            board[snake.head_x][snake.head_y + 1] = 3
          
         elsif dir == 'u'
-            board[@head_x - 1][@head_y] = 3   # (y) 
+            board[snake.head_x - 1][snake.head_y] = 3   
          
         elsif dir == 'd'
-            board[@head_x + 1][@head_y] = 3
+            board[snake.head_x + 1][snake.head_y] = 3
         end
          
-        board[@tail_x][@tail_y] = 0
+        board[snake.tail_x][snake.tail_y] = 0
     end
 end
        
